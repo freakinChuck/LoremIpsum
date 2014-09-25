@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="author" content="Silvio Stappung" />
+    <title>ITEC Testat Webseite von Silvio Stappung</title>
+    <link href="/_Styles/Global.css" rel="stylesheet" />
+    <link href="/_Styles/Main.css" rel="stylesheet" />
+    <script src="/_Scripts/jquery-2.1.1.js"></script>
+    @RenderSection("ScriptHead", false)
+</head>
+<body>
+
+    <header>
+        
+    </header>
+
+    <section id="bodySection">
+        
+        <h1>@ViewBag.Title</h1>
+        <hr />
+
+        @RenderBody()
+    </section>
+
+    <footer>
+        Created by Silvio Stappung
+    </footer>
+
+</body>
+</html>

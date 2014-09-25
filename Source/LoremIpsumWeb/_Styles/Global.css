@@ -1,0 +1,53 @@
+﻿/****************** Global Style Sheet ******************/
+/*
+    
+    Das Global Style Sheet beinhaltet Styles, welche für beide Templates gelten.    
+    
+    Author: Silvio Stappung
+    
+*/
+
+body {
+
+    font-size:12pt;
+    font-family:Arial;
+    width:1000px;
+    margin:auto;
+}
+
+header {
+}
+
+section#bodySection {
+    min-height:600px;
+    margin-bottom:20px;
+    padding:20px;
+}
+
+footer {
+    font-size:0.6em;
+    font-style:italic;
+}
+
+h1, h2, h3, h4 {
+
+}
+
+h1 {
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+h2 {
+    font-size:1.4em;
+}
+
+h3 {
+    font-size:1.3em;
+    font-style:italic;
+}
+
+h4 {
+    font-size:1.2em;
+    font-style:italic;
+}
