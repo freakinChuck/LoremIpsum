@@ -15,7 +15,13 @@ namespace LoremIpsumWeb
 
             routes.MapRoute(
                     "Default",
-                    "{controller}.aspx/{action}/{id}",
+                    "{action}.aspx/{id}",
+                    new { controller = "Home", action = "Index", id = "" }
+              );
+
+            routes.MapRoute(
+                    "ControllerAndAction",
+                    "{controller}/{action}.aspx/{id}",
                     new { action = "Index", id = "" }
               );
         }

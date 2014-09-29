@@ -9,6 +9,10 @@ namespace LoremIpsumWeb.Controllers
 {
     public class AjaxController : ApiController
     {
-
+        [HttpGet]
+        public string Test(int id)
+        {
+            return string.Format("Test Nr. {0}", id);
+        }
     }
 }

@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    text-shadow:5px 4px 2px #aaa;
+    text-shadow:-5px 4px 2px #aaa;
 }
 
 section#bodySection {
