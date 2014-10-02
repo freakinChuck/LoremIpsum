@@ -22,7 +22,7 @@ header {
 }
 
 section#bodySection {
-    min-height:500px;
+    min-height:450px;
     padding:20px;
 }
 
@@ -30,6 +30,19 @@ footer {
     font-size:0.6em;
     font-style:italic;
     padding:20px;
+}
+    footer #leftFoot {
+        float:left;
+        display:inline;
+    }
+    footer #rightFoot {
+        float:right;
+        display:inline;
+    }
+
+a {
+    color:inherit;
+    text-decoration:inherit;
 }
 
 h1, h2, h3, h4 {
