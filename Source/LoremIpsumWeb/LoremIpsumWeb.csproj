@@ -134,7 +134,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <Content Include="_Scripts\Global.js" />
     <Content Include="_Scripts\jquery-2.1.1.js" />
+    <Content Include="_Scripts\jquery.cookie.js" />
     <Content Include="_Styles\Global.css" />
     <Content Include="_Styles\Main.css" />
   </ItemGroup>

@@ -10,9 +10,17 @@
     <meta name="author" content="Silvio Stappung" />
     <title>ITEC Testat Webseite von Silvio Stappung</title>
     <link href="/_Styles/Global.css" rel="stylesheet" />
-    <link href="/_Styles/Main.css" rel="stylesheet" />
+@*    <link href="/_Styles/Main.css" rel="stylesheet" />*@
     <script src="/_Scripts/jquery-2.1.1.js"></script>
+    <script src="/_Scripts/jquery.cookie.js"></script>
+    <script src="/_Scripts/Global.js"></script>
+    <script>
+        var theme = readstyle();
+        loadtheme(theme);
+    </script>
+
     @RenderSection("ScriptHead", false)
+
 </head>
 <body>
 
