@@ -25,9 +25,19 @@ namespace LoremIpsumWeb.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Formular()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Formular(string name, string email, string nachricht)
+        {
+            ViewBag.Name = name;
+            ViewBag.Email = email;
+            ViewBag.Nachricht = nachricht;
+            return View("Formularauswertung");
         }
 
         public ActionResult Ajax()

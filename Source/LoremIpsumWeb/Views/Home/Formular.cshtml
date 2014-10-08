@@ -10,3 +10,18 @@
     }
 
 }
+
+
+@using(Html.BeginForm("Formular", "Home", FormMethod.Post, new { @class = "FormularBox" }))
+{
+    <span class="FormularDisplay">Name</span>
+    <input class="FormularInput" type="text" id="nameTextBox" placeholder="John Doe" name="Name" required />
+        
+    <span class="FormularDisplay">Email</span>
+    <input class="FormularInput" type="email" id="emailTextBox" placeholder="john.doe@example.com" name="Email" required />
+    
+    <span class="FormularDisplay">Nachricht</span>
+    <textarea class="FormularInput" id="nachtichtTextBox" placeholder="meine Meinung" name="Nachricht" required></textarea>
+    
+    <input type="submit" title="Absenden" class="RightFloatingButton" />
+}

@@ -137,6 +137,7 @@
     <Content Include="_Scripts\Global.js" />
     <Content Include="_Scripts\jquery-2.1.1.js" />
     <Content Include="_Scripts\jquery.cookie.js" />
+    <Content Include="_Scripts\LoremIpsumCanvas.js" />
     <Content Include="_Styles\Global.css" />
     <Content Include="_Styles\Main.css" />
   </ItemGroup>
@@ -161,6 +162,7 @@
     <Content Include="Views\Home\Canvas.cshtml" />
     <Content Include="Views\Home\Ajax.cshtml" />
     <Content Include="Views\Home\Formular.cshtml" />
+    <Content Include="Views\Home\Formularauswertung.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

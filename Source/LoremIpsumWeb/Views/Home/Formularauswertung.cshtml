@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Formularverarbeitung";
+}
+
+@section ScriptHead{
+
+    @if (false)
+    {
+        <script src="/_Scripts/jquery-2.1.1.js"></script>
+    }
+
+}
+
+
+@using(Html.BeginForm("Formular", "Home", FormMethod.Post, new { @class = "FormularBox" }))
+{
+    <span class="FormularDisplay">Name</span>
+    <span class="FormularInput">@ViewBag.Name</span>
+        
+    <span class="FormularDisplay">Email</span>
+    <span class="FormularInput">@ViewBag.Email</span>
+    
+    <span class="FormularDisplay">Nachricht</span>
+    <span class="FormularInput">@ViewBag.Nachricht</span>
+    
+    <span id="formularauswertungshinweis">Vielen Dankt für Ihre Angaben. <br /> Keine Angst betreffend Datenschutz, es wurde nichts gespeichert.</span>
+}

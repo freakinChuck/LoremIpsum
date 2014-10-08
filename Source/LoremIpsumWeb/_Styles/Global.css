@@ -67,3 +67,34 @@ h4 {
     font-size:1.2em;
     font-style:italic;
 }
+
+textarea {
+    resize:vertical;
+}
+
+form.FormularBox {
+    width:450px;
+}
+
+.FormularDisplay,
+.FormularInput {
+    display:inline-block;
+    margin-bottom:5px;
+    vertical-align:top;
+}
+.FormularDisplay {
+    width:183px;
+    font-weight:bold;
+}
+
+.FormularInput {
+    width:250px;
+}
+
+.RightFloatingButton {
+    float:right;
+}
+#formularauswertungshinweis {
+    font-style:italic;
+    font-size:0.8em;
+}

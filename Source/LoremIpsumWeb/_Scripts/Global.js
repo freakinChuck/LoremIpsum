@@ -1,5 +1,5 @@
 ﻿function loadthemecssfile(url) {
-    $('[data-style=dynamic').remove();
+    $('[data-style=dynamic]').remove();
     $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', url).attr('data-style', 'dynamic'));
 }
 
