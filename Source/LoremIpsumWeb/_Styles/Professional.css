@@ -1,7 +1,7 @@
-﻿/****************** Main Style Sheet ******************/
+﻿/****************** Professional Style Sheet ******************/
 /*
     
-    Das Main Style Sheet beinhaltet Styles, welche für das Haupttemplates gelten.    
+    Das Main Professional Sheet beinhaltet Styles, welche für das Haupttemplates gelten.    
     
     Author: Silvio Stappung
     
@@ -10,6 +10,7 @@
 body {
     background:#e9e9e9;
     color:#5a5a5a;
+    font-family:Arial;
 }
 
 header {
@@ -47,7 +48,7 @@ nav ul {
         }
 
 
-input, textarea {
+input, textarea, select {
     border-radius:4px;
     padding:5px;
     border:1px solid #aaa;

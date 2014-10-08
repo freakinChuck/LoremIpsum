@@ -4,6 +4,7 @@
 }
 
 function loadtheme(theme) {
+    $('#themeName').html(theme);
     var themeStyleSheet = '/_Styles/' + theme + '.css';
     loadthemecssfile(themeStyleSheet);
 }
@@ -13,7 +14,7 @@ function readstyle() {
 
     var content = $.cookie(cookieName);
     if (!content) {
-        content = "Main"; //Default Theme
+        content = "Professional"; //Default Theme
     }
     return content; 
 

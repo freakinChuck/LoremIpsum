@@ -3,6 +3,8 @@
     var canvas = document.getElementById(canvasId);
     var context = canvas.getContext("2d");
 
+    context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
     drawLorem(context);
     drawIpsum(context);
 }

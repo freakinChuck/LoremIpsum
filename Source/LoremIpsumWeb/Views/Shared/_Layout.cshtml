@@ -15,8 +15,25 @@
     <script src="/_Scripts/jquery.cookie.js"></script>
     <script src="/_Scripts/Global.js"></script>
     <script>
-        var theme = readstyle();
-        loadtheme(theme);
+        $(document).ready(function () {
+            var theme = readstyle();
+            setstyle(theme);
+        });
+        
+        function SwitchStyle() {
+            var theme = readstyle();
+            if (theme == 'Professional') {
+                theme = 'Alternative';
+            }
+            else if (theme == 'Alternative') {
+                theme = 'Weird';
+            }
+            else {
+                theme = 'Professional';
+            }
+            setstyle(theme);
+        }
+
     </script>
 
     @RenderSection("ScriptHead", false)
@@ -26,6 +43,14 @@
 
     <header>
         ITEC Testat Webseite
+
+        <span id="styleBox">
+            
+            <span>Aktueller Style: "<span id="themeName"></span>"</span>
+
+            <img src="/Views/Shared/shuffle.png" alt="Switch Style" id="switchThemeIcon" onclick="SwitchStyle()" />
+
+        </span>
     </header>
 
     <nav>
@@ -42,6 +67,8 @@
         <hr />
 
         @RenderBody()
+
+        <span class="FloatingClearRegulation">&nbsp;</span>
 
     </section>
 

@@ -10,7 +10,6 @@
 body {
 
     font-size:12pt;
-    font-family:Arial;
     width:1000px;
     margin:auto;
 }
@@ -21,9 +20,22 @@ header {
     font-weight:bold;
 }
 
+    header #styleBox {
+        float:right;
+        font-size:0.5em;
+        vertical-align:top;
+    }
+        header #styleBox #switchThemeIcon {
+            width:20px;
+            margin-left:5px;
+            cursor:pointer;
+        }
+
 section#bodySection {
     min-height:450px;
     padding:20px;
+    clear:both;
+
 }
 
 footer {
@@ -97,4 +109,24 @@ form.FormularBox {
 #formularauswertungshinweis {
     font-style:italic;
     font-size:0.8em;
+}
+
+#loremIpsumGenerierungBox {
+
+}
+    #loremIpsumGenerierungBox input[type=number] {
+        width:50px;
+    }
+
+#loremIpsumGenerierungText {
+    font-style:italic;
+    margin-right:20px;
+}
+#loremIpsumTextArea {
+    width:800px;
+    height:300px;
+}
+
+.FloatingClearRegulation {
+    clear:both;
 }

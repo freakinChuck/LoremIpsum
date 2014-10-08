@@ -9,4 +9,55 @@
         <script src="/_Scripts/jquery-2.1.1.js"></script>
     }
 
+    <script>
+
+        $(document).ready(LoadTextBox);
+
+        function LoadTextBox() {
+            var numberBox = document.getElementById('numberOfItemsInput');
+            if (numberBox.validity.valid) {
+                var number = $(numberBox).val();
+                var itemtype = $('#itemTypDropDown').val();
+                
+                @{
+                    var url = Url.Action("LoremIpsum", "Ajax");
+                }
+
+                $.ajax('@url', {
+                    type: 'POST',
+                    data: {
+                        itemtyp: itemtype,
+                        number: number
+                    },
+                    success: function (result) {
+
+                        $('#loremIpsumTextArea').val(result);
+
+                    },
+                    error: function () {
+
+                        $('#loremIpsumTextArea').val('Es trat ein Fehler während der Verbindung zum Server auf...');
+
+                    }
+                });
+            }
+        }
+
+    </script>
+
 }
+
+<div id="loremIpsumGenerierungBox">
+    <span id="loremIpsumGenerierungText">Lorem Ipsum Text generieren mit </span>
+
+    <input type="number" id="numberOfItemsInput" min="1" max="1000" value="100" onchange="LoadTextBox()" />
+
+    <select id="itemTypDropDown" onchange="LoadTextBox()">
+        <option value="Buchstabe">Buchstaben</option>
+        <option value="Wort" selected>W&ouml;rter</option>
+        <option value="Absatz">Abs&auml;tze</option>
+    </select>
+
+    <textarea id="loremIpsumTextArea"></textarea>
+
+</div>

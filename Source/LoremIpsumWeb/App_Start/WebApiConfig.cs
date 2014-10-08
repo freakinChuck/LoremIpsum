@@ -12,8 +12,8 @@ namespace LoremIpsumWeb
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{action}.asmx/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                routeTemplate: "api/{controller}/{action}.asmx",
+                defaults: new {  }
             );
         }
     }

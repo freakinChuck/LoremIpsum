@@ -1,0 +1,68 @@
+﻿/****************** Alternative Style Sheet ******************/
+/*
+    
+    Das Alternative Style Sheet beinhaltet Styles, welche für das altenative Template gelten.    
+    
+    Author: Silvio Stappung
+    
+*/
+
+body {
+    background:#FFF;
+    color:black;
+    font-family:Calibri, Arial;
+    padding-top:50px;
+}
+
+header {
+    /*text-shadow:-5px 4px 2px #aaa;*/
+}
+
+section#bodySection {
+    background:#e5e5e5;
+    box-shadow:10px 10px 10px #c2c0c0;
+    border-radius:5px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+    text-align:center;
+    background:#0a2e93;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    color:#FFF;
+}
+    nav ul li,
+    nav ul li a {
+        display:inline-block;
+        margin:0px;
+        padding:0px;
+    }
+    nav ul li a {
+        letter-spacing:0px;
+        width:225px;
+        padding:10px;
+        margin:0px;
+        border-bottom:3px solid #0a2e93;
+    }
+        nav ul li a:hover {
+            border-bottom:3px solid red;
+        }
+
+
+input, textarea, select {
+    border-radius:4px;
+    padding:5px;
+    border:1px solid #aaa;
+}
+textarea.FormularInput {
+    height:100px;
+}
+
+canvas {
+    background:#FFF;
+}

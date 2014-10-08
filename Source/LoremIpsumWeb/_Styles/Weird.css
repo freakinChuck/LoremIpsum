@@ -1,0 +1,103 @@
+﻿/****************** Weird Style Sheet ******************/
+/*
+    
+    Das Weird Style Sheet beinhaltet Styles, welche für das altenative Template gelten.    
+    
+    Author: Silvio Stappung
+    
+*/
+
+@keyframes blinkRedBorder { 
+   50% { border-color: #a9310a; } 
+}
+
+body {
+    background:#d9f644;
+    color:#0a7669;
+    font-family:'Bauhaus 93';
+}
+
+html {
+    animation: blinkRedBorder .5s step-end infinite alternate;
+    border: 8px solid #d9f644 ;
+}
+
+
+header{ /*or other element you want*/
+    padding:5px;
+
+}
+
+
+header #styleBox {
+    margin-right:50px;
+    font-size:1em;
+}
+
+section#bodySection {
+    background-color:#f8b64e;
+    color:#0c5104;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align:center;
+    /*background: linear-gradient(to bottom, #ddd, #ccc, #ddd);*/
+}
+    nav ul li,
+    nav ul li a {
+        display:inline-block;
+        margin:0px;
+        padding:0px;
+        color:#cfffdc;
+    }
+    nav ul li {
+        position:relative;
+        width:150px;
+    }
+    nav ul li:nth-child(1) {
+            width:300px;
+            left:50px;
+        }
+
+        nav ul li:nth-child(2) {
+            top:40px;
+            left:-460px;
+            transform: rotate(-45deg)
+        }
+
+        nav ul li:nth-child(3) {
+            top:40px;
+            left:390px;
+            transform: rotate(45deg)
+        }
+
+        nav ul li:nth-child(4) {
+            width:300px;
+            left:-120px;
+        }
+
+    nav ul li a {
+        letter-spacing:0px;
+        width:inherit;
+        border-radius:5px;
+        padding:10px;
+        margin:0px;
+        background:#5f0505;
+    }
+        nav ul li a:hover  {
+            background:#4103a9;
+        }
+
+input, textarea, select {
+    border-radius:4px;
+    padding:5px;
+    border:1px solid #aaa;
+}
+textarea.FormularInput {
+    height:100px;
+}
+
+canvas {
+    background:#ccc;
+}
