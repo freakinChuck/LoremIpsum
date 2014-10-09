@@ -1,4 +1,13 @@
-﻿function drawOnCanvas(canvasId) {
+﻿/****************** LoremIpsumCanvas JavaScript ******************/
+/*
+    
+    Das LoremIpsumCanvas JavaScript file beinhaltet JavaScipt Funktionen, mit welchen das Canvas auf der entsprechenden Seite beschrieben wird.    
+    
+    Author: Silvio Stappung
+    
+*/
+
+function drawOnCanvas(canvasId) {
 
     var canvas = document.getElementById(canvasId);
     var context = canvas.getContext("2d");

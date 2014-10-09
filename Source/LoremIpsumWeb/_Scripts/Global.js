@@ -1,4 +1,13 @@
-﻿function loadthemecssfile(url) {
+﻿/****************** Global JavaScript ******************/
+/*
+    
+    Das Globale JavaScript file beinhaltet JavaScipt Funktionen welche auf allen Pages verwendet werden.    
+    
+    Author: Silvio Stappung
+    
+*/
+
+function loadthemecssfile(url) {
     $('[data-style=dynamic]').remove();
     $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', url).attr('data-style', 'dynamic'));
 }
