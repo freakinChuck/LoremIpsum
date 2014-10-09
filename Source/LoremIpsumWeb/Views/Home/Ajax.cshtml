@@ -23,6 +23,8 @@
                     var url = Url.Action("LoremIpsum", "Ajax");
                 }
 
+                $('#loremIpsumTextArea').attr('disabled', true);
+
                 $.ajax('@url', {
                     type: 'POST',
                     data: {
@@ -31,6 +33,7 @@
                     },
                     success: function (result) {
 
+                        $('#loremIpsumTextArea').removeAttr('disabled');
                         $('#loremIpsumTextArea').val(result);
 
                     },
