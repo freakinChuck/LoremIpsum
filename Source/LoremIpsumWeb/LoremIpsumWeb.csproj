@@ -139,6 +139,7 @@
     <Content Include="_Scripts\jquery-2.1.1.js" />
     <Content Include="_Scripts\jquery.cookie.js" />
     <Content Include="_Scripts\LoremIpsumCanvas.js" />
+    <Content Include="_Scripts\SinusCanvas.js" />
     <Content Include="_Styles\Alternative.css" />
     <Content Include="_Styles\Weird.css" />
     <Content Include="_Styles\Global.css" />

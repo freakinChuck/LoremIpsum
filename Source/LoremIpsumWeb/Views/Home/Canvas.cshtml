@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Canvas Element";
+    bool useSinus = true;
 }
 
 @section ScriptHead{
@@ -8,11 +9,29 @@
     {
         <script src="/_Scripts/jquery-2.1.1.js"></script>
     }
-    <script src="/_Scripts/LoremIpsumCanvas.js"></script>
+    @if (useSinus)
+    {
+        <script src="/_Scripts/SinusCanvas.js"></script>    
+        <script>
+            function drawChart() {
+                drawSinusGraph('mainCanvas', $('#winkelSlider').val());
+            }
+        </script>
+    }
+    else
+    {
+        <script src="/_Scripts/LoremIpsumCanvas.js"></script> 
+    }
 }
 
 <canvas id="mainCanvas" width="960" height="350"></canvas>
 
 
-
-<input type="button" value="Zeichne etwas" class="RightFloatingButton" onclick="drawOnCanvas('mainCanvas')" />
+@if (useSinus)
+{
+    <input type="range" min="0" max="360" id="winkelSlider" value="0" oninput="drawChart()" />
+}
+else
+{    
+    <input type="button" value="Zeichne etwas" class="RightFloatingButton" onclick="drawOnCanvas('mainCanvas')" />
+}
