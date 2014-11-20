@@ -14,8 +14,13 @@
         <script src="/_Scripts/SinusCanvas.js"></script>    
         <script>
             function drawChart() {
-                drawSinusGraph('mainCanvas', $('#winkelSlider').val());
+                var gradVal = $('#winkelSlider').val();
+                $('#gradLabel').html(gradVal);
+                drawSinusGraph('mainCanvas', gradVal);
             }
+            $(document).ready(function () {
+                drawChart();
+            });
         </script>
     }
     else
@@ -30,6 +35,7 @@
 @if (useSinus)
 {
     <input type="range" min="0" max="360" id="winkelSlider" value="0" oninput="drawChart()" />
+    <span><label id="gradLabel">0</label> Grad</span>
 }
 else
 {    

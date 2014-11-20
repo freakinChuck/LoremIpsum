@@ -9,10 +9,48 @@
         <script src="/_Scripts/jquery-2.1.1.js"></script>
     }
 
+    <script>
+        $(document).on('submit', '#kontaktForm', function (event) {
+            if (!ValidateDocument()) {
+                event.preventDefault();
+            }
+        });
+
+        function ValidateDocument() {
+            // if HTML 5 Validation can be used correctly, this Method should ALWAYS return TRUE
+
+            // first, reset all validation
+            var isValid = true;
+            $('#nameTextBox').css('border-color', '');
+            $('#emailTextBox').css('border-color', '');
+            $('#nachtichtTextBox').css('border-color', '');
+
+
+            //if(string) checks fr NULL, Empty and undefined
+            if (!$('#nameTextBox').val()) {
+                $('#nameTextBox').css('border-color', 'red');
+                isValid = false;
+            }
+
+            if (!$('#emailTextBox').val() || $('#emailTextBox').val().indexof('@@') <= 0) {
+                $('#emailTextBox').css('border-color', 'red');
+                isValid = false;
+            }
+
+            if (!$('#nachtichtTextBox').val()) {
+                $('#nachtichtTextBox').css('border-color', 'red');
+                isValid = false;
+            }
+
+
+            return isValid;
+        }
+
+    </script>
 }
 
 
-@using(Html.BeginForm("Formular", "Home", FormMethod.Post, new { @class = "FormularBox" }))
+@using(Html.BeginForm("Formular", "Home", FormMethod.Post, new { @class = "FormularBox", id="kontaktForm" }))
 {
     <span class="FormularDisplay">Name</span>
     <input class="FormularInput" type="text" id="nameTextBox" placeholder="John Doe" name="Name" required />
